@@ -71,10 +71,11 @@
       <a class="btn btn-basket btn-basket-active" href="#">2 товара</a>
       <div class="common-buttons-form common-buttons-form-backet">
         <div class="basket-item">
-          <button class="basket-item-delete"></button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" class="basket-item-delete">
+            <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+          </svg>
           <div class="basket-item-title">Пломбир с апельсиновым джемом
-            <img src="img/basket-item1.jpg" class="basket-item1" width="33" height="33"
-                 alt="Пломбир с апельсиновым джемом">
+            <img src="img/basket-item1.jpg" class="basket-item1" width="33" height="33" alt="Пломбир с апельсиновым джемом">
           </div>
           <div class="basket-item-count">1,5 кг x
             <span class="cost-per-kg">200 руб.</span>
@@ -82,7 +83,9 @@
           <div class="basket-item-worth">300 руб.</div>
         </div>
         <div class="basket-item basket-item-last">
-          <button class="basket-item-delete basket-item-delete-last"></button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" class="basket-item-delete basket-item-delete-last">
+            <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+          </svg>
           <div class="basket-item-title">Клубничный пломбир с присыпкой из белого шоколада
             <img src="img/basket-item2.jpg" class="basket-item2" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
           </div>
@@ -130,11 +133,14 @@
         </div>
       </div>
       <div class="filter-title-price">Цена: 100 руб. – 500 руб.
-        <div class="filter-cost">
-          <div class="scale"></div>
-          <div class="bar"></div>
-          <div class="range-toggle"></div>
-          <div class="range-toggle"></div>
+        <div class="price">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
         </div>
       </div>
       <fieldset class="fat-content">
@@ -295,7 +301,7 @@
   <nav class="pagination">
     <ul class="pagination-pages">
       <li class="pagination_item">
-        <a class="pagination-btn"><img src="img/icon-right-small.svg" class="icon-right" width="8" height="14" alt="Назад"></a>
+        <a class="pagination-btn"><img src="img/icon-right-small.svg" class="icon-left" width="8" height="14" alt="Назад"></a>
       </li>
       <li class="pagination_item">
         <a class="pagination-btn paginator_btn--active" href="#">1</a>
@@ -313,7 +319,7 @@
         <a class="pagination-btn href="#">5</a>
       </li>
       <li class="pagination_item pagination_item--last">
-        <a class="pagination-btn href="#"><img src="img/icon-right-small.svg" class="icon-left" width="8" height="14" alt="Вперёд"></a>
+        <a class="pagination-btn href="#"><img src="img/icon-right-small.svg" class="icon-right" width="8" height="14" alt="Вперёд"></a>
       </li>
     </ul>
   </nav>
@@ -339,7 +345,7 @@
         <a class="logo-academy-img" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
       <p class="made-academy">Сделано в
-        <a class="footer-href" href="https://htmlacademy.ru">HTML Academy</a>@2017
+        <a class="footer-href" href="https://htmlacademy.ru">HTML Academy </a> @2017
       </p>
     </section>
   </footer>

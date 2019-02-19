@@ -493,7 +493,7 @@ input[type="password"]:not(.label-hide):focus + label{
   text-decoration: none;
   color: #ffffff;
   font-size: 14px;
-  background: rgba(255,255,255,.2);
+  background: rgba(255, 255, 255, .2);
   margin: 0px;
   padding: 6px;
   border-radius: 16px;
@@ -505,7 +505,7 @@ input[type="password"]:not(.label-hide):focus + label{
   padding-bottom: 12px;
   padding-left: 16px;
   font-size: 0px;
-  background: rgba(255,255,255,.2);
+  background: rgba(255, 255, 255, .2);
 }
 
 .btn-search:hover {
@@ -579,7 +579,7 @@ input[type="password"]:not(.label-hide):focus + label{
 
 .btn.btn-basket {
   color: #ffffff;
-  background: rgba(255,255,255,.2);
+  background: rgba(255, 255, 255, .2);
 }
 
 .btn.btn-basket::before {
@@ -778,8 +778,8 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 .item:hover .item-hover {
-  background:  rgba(255,255,255,.2);
-  box-shadow: 0 20px 20px rgba(0,0,0,.4);
+  background: rgba(255, 255, 255, .2);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, .4);
   z-index: 50;
   min-height: 353px;
 }
@@ -1658,16 +1658,11 @@ input[type="password"]:not(.label-hide):focus + label{
 
 .filters {
   display: flex;
-  flex-direction: column;
-}
-
-.filters-label {
-  width: 1146px;
-  height: 132px;
-  display: flex;
   flex-direction: row;
+  width: 1146px;
   flex-wrap: wrap;
 }
+
 /*Сортировка*/
 .wrap-select-sort {
   margin-right: 6px;
@@ -1675,6 +1670,9 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 .sort {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 6px 7px 8px 9px;
   border-radius: 20px;
   background: #a9bab0;
@@ -1683,11 +1681,88 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 .sort:hover {
-  color:#000000;
+  color: #000000;
 }
 
-/*Цена*/
+.filter-title-price {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 .price {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.price-controls {
+  display: none;
+}
+
+.price-controls label {
+  position: relative;
+  left: 50px;
+  top: -17px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.price-controls input {
+  border: none;
+  width: 50px;
+  background: inherit;
+  color: #ffffff;
+  padding: 0;
+}
+
+.range-controls {
+  position: relative;
+  height: 35px;
+  width: 350px;
+  background-color: #a9bab0;
+  border-radius: 50px;
+}
+
+.range-controls .scale {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+  top: 15px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 60%;
+  height: 2px;
+  background: #ffffff;
+  margin-left: 30px;
+}
+
+.range-toggle-min {
+  left: 223px;
+}
+
+.range-toggle-max {
+  left: 77px;
+}
+
+.range-toggle {
+  position: absolute;
+  top: 5px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+/*Цена
+.price {
+  position: relative;
   width: 200px;
   padding: 20px 7px 13px 9px;
   border-radius: 20px;
@@ -1708,7 +1783,7 @@ input[type="password"]:not(.label-hide):focus + label{
 
 .range-toggle {
   position: absolute;
-  top: 216px;
+  top: 11px;
   width: 4px;
   height: 4px;
   background: #ababab;
@@ -1719,13 +1794,13 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 .range-toggle-min {
-  left: 311px;
+  left: 154px;
 }
 
 .range-toggle-max {
-  left: 32%;
+  left: 12%;
 }
-
+*/
 .fat-content {
   border: none;
   padding: 0;
@@ -1752,16 +1827,15 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 .btn-filter {
-  position: relative;
-  top: -8px;
   width: 140px;
-  margin: 34px 0 0 11px;
+  margin: 26px 0 0 11px;
   padding: 2px 26px 3px 28px;
   background-color: #a9bab0;
   color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 20px;
   font-size: 16px;
+  height: 36px;
 }
 
 .btn-filter:hover {
@@ -1769,6 +1843,7 @@ input[type="password"]:not(.label-hide):focus + label{
   background-color: #ffffff;
 
 }
+
 /*
 .filter-title {
   font-weight: 500;
@@ -2079,7 +2154,7 @@ input[type=checkbox], input[type=radio] {
   border-radius: 50%;
 }
 
-.icon-left{
+.icon-left {
   transform: rotate(180deg);
 }
 

@@ -45,7 +45,8 @@
       <a class="btn btn-search" href="#">Поиск</a>
       <div class="buttons-common-form buttons-common-form-search">
         <div class="input-field buttons-common-input-field">
-          <input id="search" type="text" name="search" class="search-field"><label for="search" class="search">Что ищем?</label>
+          <input id="search" type="text" name="search" class="search-field"><label for="search" class="search">Что
+          ищем?</label>
         </div>
       </div>
     </div>
@@ -54,10 +55,12 @@
       <div class="buttons-common-form buttons-common-form-login">
         <form action="#" method="get">
           <div class="input-field-form buttons-common-input-field">
-            <input id="password" type="password" name="password" class="password-field"><label for="password" class="password">Пароль</label>
+            <input id="password" type="password" name="password" class="password-field"><label for="password"
+                                                                                               class="password">Пароль</label>
           </div>
           <div class="input-field-form buttons-common-input-field">
-            <input id="login" type="email" name="login" class="email-field"><label for="login" class="email">Электронная почта</label>
+            <input id="login" type="email" name="login" class="email-field"><label for="login" class="email">Электронная
+            почта</label>
           </div>
           <input class="btn btn-entrance" type="submit" value="войти">
           <div class="form-login-hrefs">
@@ -72,10 +75,12 @@
       <div class="common-buttons-form common-buttons-form-backet">
         <div class="basket-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" class="basket-item-delete">
-            <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+            <path fill="#231F20"
+                  d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
           </svg>
           <div class="basket-item-title">Пломбир с апельсиновым джемом
-            <img src="img/basket-item1.jpg" class="basket-item1" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+            <img src="img/basket-item1.jpg" class="basket-item1" width="33" height="33"
+                 alt="Пломбир с апельсиновым джемом">
           </div>
           <div class="basket-item-count">1,5 кг x
             <span class="cost-per-kg">200 руб.</span>
@@ -83,11 +88,14 @@
           <div class="basket-item-worth">300 руб.</div>
         </div>
         <div class="basket-item basket-item-last">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" class="basket-item-delete basket-item-delete-last">
-            <path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
+               class="basket-item-delete basket-item-delete-last">
+            <path fill="#231F20"
+                  d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/>
           </svg>
           <div class="basket-item-title">Клубничный пломбир с присыпкой из белого шоколада
-            <img src="img/basket-item2.jpg" class="basket-item2" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+            <img src="img/basket-item2.jpg" class="basket-item2" width="33" height="33"
+                 alt="Клубничный пломбир с присыпкой из белого шоколада">
           </div>
           <div class="basket-item-count">1,5 кг x
             <span class="cost-per-kg">300 руб.</span>
@@ -121,42 +129,57 @@
   </nav>
   <h1 class="ice-cream">Сливочное мороженое</h1>
   <form class="filters" action="#" method="get">
-    <div class="filters-label">
-      <div class="filter-title">Сортировка:
-        <div class="wrap-select-sort">
-          <select name="sort" class="sort">
-            <option value="popular">по популярности</option>
-            <option value="up">сначала недорогие</option>
-            <option value="down">сначала дорогие</option>
-            <option value="fat">по жирности</option>
-          </select>
-        </div>
+    <div class="filter-title">Сортировка:
+      <div class="wrap-select-sort">
+        <select name="sort" class="sort">
+          <option value="popular">по популярности</option>
+          <option value="up">сначала недорогие</option>
+          <option value="down">сначала дорогие</option>
+          <option value="fat">по жирности</option>
+        </select>
       </div>
-      <div class="filter-title-price">Цена: 100 руб. – 500 руб.
-        <div class="price">
-          <div class="range-controls">
-            <div class="scale">
-              <div class="bar"></div>
-            </div>
-            <div class="range-toggle range-toggle-min"></div>
-            <div class="range-toggle range-toggle-max"></div>
-          </div>
-        </div>
+    </div>
+    <fieldset class="filter-title-price">
+      <legend class="price">Цена:</legend>
+      <div class="price-controls">
+        <label class="min-price">
+          <input name="min-price" type="text" value="100руб.—">
+        </label>
+        <label class="max-price">
+          <input name="max-price" type="text" value="500руб.">
+        </label>
       </div>
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="range-toggle range-toggle-min"></div>
+        <div class="range-toggle range-toggle-max"></div>
+      </div>
+    </fieldset>
       <fieldset class="fat-content">
         <legend class="filter-title">Жирность:</legend>
         <div class="container-buttons container-buttons-fat">
-          <input id="fat-0" type="radio" name="fat" value="0" class="fat fat-zero"><label for="fat-0" class="checked-label">0%</label>
-          <input id="fat-<10" type="radio" name="fat" value="<10" checked class="fat fat-ten"><label for="fat-<10" class="checked-label">до 10%</label>
-          <input id="fat-<30" type="radio" name="fat" value="<30" class="fat fat-thirty"><label for="fat-<30"class="checked-label">до 30%</label>
-          <input id="fat->30" type="radio" name="fat" value=">30" class="fat more-thirty"><label for="fat->30" class="checked-label">выше 30%</label>
+          <input id="fat-0" type="radio" name="fat" value="0" class="fat fat-zero"><label for="fat-0"
+                                                                                          class="checked-label">0%</label>
+          <input id="fat-<10" type="radio" name="fat" value="<10" checked class="fat fat-ten"><label for="fat-<10"
+                                                                                                     class="checked-label">до
+          10%</label>
+          <input id="fat-<30" type="radio" name="fat" value="<30" class="fat fat-thirty"><label for="fat-<30"
+                                                                                                class="checked-label">до
+          30%</label>
+          <input id="fat->30" type="radio" name="fat" value=">30" class="fat more-thirty"><label for="fat->30"
+                                                                                                 class="checked-label">выше
+          30%</label>
         </div>
       </fieldset>
       <fieldset class="product-fillers">
         <legend class="filter-title">Наполнители:</legend>
         <div class="container-buttons container-buttons-fillers">
-          <input id="chocolate" type="checkbox" name="sugar" value="chocolate" checked><label for="chocolate">шоколадные</label>
-          <input id="sugar" type="checkbox" name="sugar" value="sugar" checked><label for="sugar">сахарные присыпки</label>
+          <input id="chocolate" type="checkbox" name="sugar" value="chocolate" checked><label
+          for="chocolate">шоколадные</label>
+          <input id="sugar" type="checkbox" name="sugar" value="sugar" checked><label for="sugar">сахарные
+          присыпки</label>
           <input id="fruit" type="checkbox" name="sugar" value="fruit"><label for="fruit">фрукты</label>
           <input id="syrop" type="checkbox" name="sugar" value="syrop"><label for="syrop">сиропы</label>
           <input id="jam" type="checkbox" name="sugar" value="jam"><label for="jam">джемы</label>
@@ -171,7 +194,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-orange-jam1.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">310<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">310
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -182,7 +211,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-coffee-chocolate2.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">310<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">310
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -193,7 +228,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-strawberry-powder3.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">380<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">380
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -204,7 +245,13 @@
         <div class="item-hover-content">
           <img src="img/cream-brule-caramel-gravy4.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">355<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">355
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -215,7 +262,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-cranberry-jam5.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">415<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">415
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -226,7 +279,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-blueberry6.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">325<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">325
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -237,7 +296,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-lemon-powder7.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">410<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">410
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -248,7 +313,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-chocolate-chips8.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">375<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">375
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -259,7 +330,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-chunks-chocolate9.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">320<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">320
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -270,7 +347,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-menthol-syrup10.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">440<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">440
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -281,7 +364,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-pieces-dark-chocolate11.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">435<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">435
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -292,7 +381,13 @@
         <div class="item-hover-content">
           <img src="img/creamy-mint-syrup12.jpg" class="item-hover-img" width="267" height="266"
                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">355<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg>/кг</p>
+          <p class="item-price">355
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+              <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+            </svg>
+            /кг
+          </p>
           <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </div>
       </div>
@@ -301,25 +396,27 @@
   <nav class="pagination">
     <ul class="pagination-pages">
       <li class="pagination_item">
-        <a class="pagination-btn"><img src="img/icon-right-small.svg" class="icon-left" width="8" height="14" alt="Назад"></a>
+        <a class="pagination-btn"><img src="img/icon-right-small.svg" class="icon-left" width="8" height="14"
+                                       alt="Назад"></a>
       </li>
       <li class="pagination_item">
         <a class="pagination-btn paginator_btn--active" href="#">1</a>
       </li>
       <li class="pagination_item">
-        <a class="pagination-btn href="#">2</a>
+        <a class="pagination-btn href=" #">2</a>
       </li>
       <li class="pagination_item">
-        <a class="pagination-btn href="#">3</a>
+        <a class="pagination-btn href=" #">3</a>
       </li>
       <li class="pagination_item">
-        <a class="pagination-btn href="#">4</a>
+        <a class="pagination-btn href=" #">4</a>
       </li>
       <li class="pagination_item">
-        <a class="pagination-btn href="#">5</a>
+        <a class="pagination-btn href=" #">5</a>
       </li>
       <li class="pagination_item pagination_item--last">
-        <a class="pagination-btn href="#"><img src="img/icon-right-small.svg" class="icon-right" width="8" height="14" alt="Вперёд"></a>
+        <a class="pagination-btn href=" #"><img src="img/icon-right-small.svg" class="icon-right" width="8" height="14"
+                                                alt="Вперёд"></a>
       </li>
     </ul>
   </nav>

@@ -129,7 +129,8 @@
   </nav>
   <h1 class="ice-cream">Сливочное мороженое</h1>
   <form class="filters" action="#" method="get">
-    <div class="filter-title">Сортировка:
+    <fieldset class="filter-title-price">
+      <legend class="sorting">Сортировка:</legend>
       <div class="wrap-select-sort">
         <select name="sort" class="sort">
           <option value="popular">по популярности</option>
@@ -137,18 +138,22 @@
           <option value="down">сначала дорогие</option>
           <option value="fat">по жирности</option>
         </select>
+        <svg class="select-icon-down" xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5">
+          <path fill="#FFF" d="M4.5 5L0 0h9z"/>
+        </svg>
       </div>
-    </div>
+    </fieldset>
     <fieldset class="filter-title-price">
-      <legend class="price">Цена:</legend>
-      <div class="price-controls">
-        <label class="min-price">
-          <input name="min-price" type="text" value="100руб.—">
-        </label>
-        <label class="max-price">
-          <input name="max-price" type="text" value="500руб.">
-        </label>
-      </div>
+      <legend class="price">Цена:
+        <div class="price-controls">
+          <label class="min-price">
+            <input class="input-min-price" type="text" name="min-price" value="100 руб.">
+          </label>
+          <label class="max-price">
+            <input class="input-max-price" type="text" name="max-price" value="500 руб.">
+          </label>
+        </div>
+      </legend>
       <div class="range-controls">
         <div class="scale">
           <div class="bar"></div>
@@ -157,239 +162,217 @@
         <div class="range-toggle range-toggle-max"></div>
       </div>
     </fieldset>
-      <fieldset class="fat-content">
-        <legend class="filter-title">Жирность:</legend>
-        <div class="container-buttons container-buttons-fat">
-          <input id="fat-0" type="radio" name="fat" value="0" class="fat fat-zero"><label for="fat-0"
-                                                                                          class="checked-label">0%</label>
-          <input id="fat-<10" type="radio" name="fat" value="<10" checked class="fat fat-ten"><label for="fat-<10"
-                                                                                                     class="checked-label">до
-          10%</label>
-          <input id="fat-<30" type="radio" name="fat" value="<30" class="fat fat-thirty"><label for="fat-<30"
-                                                                                                class="checked-label">до
-          30%</label>
-          <input id="fat->30" type="radio" name="fat" value=">30" class="fat more-thirty"><label for="fat->30"
-                                                                                                 class="checked-label">выше
-          30%</label>
-        </div>
-      </fieldset>
-      <fieldset class="product-fillers">
-        <legend class="filter-title">Наполнители:</legend>
-        <div class="container-buttons container-buttons-fillers">
-          <input id="chocolate" type="checkbox" name="sugar" value="chocolate" checked><label
-          for="chocolate">шоколадные</label>
-          <input id="sugar" type="checkbox" name="sugar" value="sugar" checked><label for="sugar">сахарные
-          присыпки</label>
-          <input id="fruit" type="checkbox" name="sugar" value="fruit"><label for="fruit">фрукты</label>
-          <input id="syrop" type="checkbox" name="sugar" value="syrop"><label for="syrop">сиропы</label>
-          <input id="jam" type="checkbox" name="sugar" value="jam"><label for="jam">джемы</label>
-        </div>
-      </fieldset>
-      <input class="btn-filter" type="submit" value="Применить">
+    <fieldset class="fat-content">
+      <legend class="filter-title">Жирность:</legend>
+      <div class="container-buttons container-buttons-fat">
+        <input id="fat-0" type="radio" name="fat" value="0" class="fat fat-zero"><label for="fat-0"
+                                                                                        class="checked-label">0%</label>
+        <input id="fat-<10" type="radio" name="fat" value="<10" checked class="fat fat-ten"><label for="fat-<10"
+                                                                                                   class="checked-label">до
+        10%</label>
+        <input id="fat-<30" type="radio" name="fat" value="<30" class="fat fat-thirty"><label for="fat-<30"
+                                                                                              class="checked-label">до
+        30%</label>
+        <input id="fat->30" type="radio" name="fat" value=">30" class="fat more-thirty"><label for="fat->30"
+                                                                                               class="checked-label">выше
+        30%</label>
+      </div>
+    </fieldset>
+    <fieldset class="product-fillers">
+      <legend class="filter-title">Наполнители:</legend>
+      <div class="container-buttons container-buttons-fillers">
+        <input id="chocolate" type="checkbox" name="sugar" value="chocolate" checked><label
+        for="chocolate">шоколадные</label>
+        <input id="sugar" type="checkbox" name="sugar" value="sugar" checked><label for="sugar">сахарные
+        присыпки</label>
+        <input id="fruit" type="checkbox" name="sugar" value="fruit"><label for="fruit">фрукты</label>
+        <input id="syrop" type="checkbox" name="sugar" value="syrop"><label for="syrop">сиропы</label>
+        <input id="jam" type="checkbox" name="sugar" value="jam"><label for="jam">джемы</label>
+      </div>
+    </fieldset>
+    <input class="btn-filter" type="submit" value="Применить">
   </form>
   <div class="items-ice">
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-orange-jam1.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">310
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+
+        <img src="img/creamy-orange-jam1.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">310
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-coffee-chocolate2.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">310
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-coffee-chocolate2.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">310
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-strawberry-powder3.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">380
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-strawberry-powder3.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">380
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/cream-brule-caramel-gravy4.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">355
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/cream-brule-caramel-gravy4.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">355
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-cranberry-jam5.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">415
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-cranberry-jam5.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">415
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-blueberry6.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">325
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-blueberry6.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">325
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-lemon-powder7.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">410
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-lemon-powder7.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">410
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-chocolate-chips8.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">375
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-chocolate-chips8.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">375
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-chunks-chocolate9.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">320
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-chunks-chocolate9.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">320
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-menthol-syrup10.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">440
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-menthol-syrup10.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">440
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-pieces-dark-chocolate11.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">435
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-pieces-dark-chocolate11.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">435
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
     <section class="item">
       <div class="item-hover">
         <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
-        <div class="item-hover-content">
-          <img src="img/creamy-mint-syrup12.jpg" class="item-hover-img" width="267" height="266"
-               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <p class="item-price">355
-            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
-              <path fill="#FFF"
-                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
-            </svg>
-            /кг
-          </p>
-          <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </div>
+        <img src="img/creamy-mint-syrup12.jpg" class="item-hover-img" width="267" height="266"
+             alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+        <p class="item-price">355
+          <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" class="rouble">
+            <path fill="#FFF"
+                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/>
+          </svg>
+          /кг
+        </p>
+        <a class="item-price-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </div>
     </section>
   </div>

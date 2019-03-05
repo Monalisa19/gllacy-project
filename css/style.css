@@ -296,7 +296,7 @@ body {
   display: flex;
   flex-direction: row;
   position: relative;
-  left: 17px;
+  left: 14px;
   top: 5px;
   width: 284px;
   min-height: 34px;
@@ -424,7 +424,7 @@ body {
   line-height: 24px;
   color: #999999;
 }
-
+/*
 input[type="text"]:focus {
   padding-top: 6px;
   padding-bottom: 5px;
@@ -440,16 +440,45 @@ input[type="text"]:not(.label-hide):focus + label {
   line-height: 13px;
   color: #5b9ddf;
 }
+*/
 
-/*
-input[type="password"]:not(.label-hide):focus + label{
+.field-newsletter {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2) inset;
+  border: none;
+  border-radius: 4px;
+  min-height: 24px;
+}
+
+.field-newsletter:hover {
+  border: 2px solid rgba(56, 74, 93, 0.48);
+}
+
+.email-label {
   position: absolute;
-  top: -15px;
   left: 15px;
+  top: 7px;
+  color: #999999;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+}
+
+.field-newsletter:focus + .email-label{
+  display: block;
+  position: absolute;
   font-size: 11px;
-  line-height: 13px;
-  color: #5b9ddf;    
-}*/
+  color: #5b9ddf;
+  top: -23px;
+  left: 14px;
+}
+
+
 .search-field {
   width: 267px;
   padding-top: 5px;
@@ -537,8 +566,8 @@ input[type="password"]:not(.label-hide):focus + label{
 
 .buttons-common-search .btn-basket {
   padding-top: 6px;
-  padding-right: 33px;
-  padding-left: 41px;
+  padding-right: 22px;
+  padding-left: 35px;
   padding-bottom: 8px;
 
 }
@@ -577,11 +606,11 @@ input[type="password"]:not(.label-hide):focus + label{
   background-color: #f8f7f4;
 }
 
-.btn.btn-basket {
+/*.btn.btn-basket {
   color: #ffffff;
   background: rgba(255, 255, 255, .2);
 }
-
+*/
 .btn.btn-basket::before {
   position: absolute;
   content: " ";
@@ -594,7 +623,7 @@ input[type="password"]:not(.label-hide):focus + label{
   margin: 5px;
 }
 
-.btn-basket:hover::before {
+.btn.btn-basket-active::before {
   position: absolute;
   content: " ";
   left: 166px;
@@ -606,21 +635,11 @@ input[type="password"]:not(.label-hide):focus + label{
   margin: 5px;
 }
 
-.btn-basket:hover {
-  color: #000000;
-  background-color: #f8f7f4;
-}
-
 .btn-basket-active {
   padding-left: 44px;
   padding-right: 16px;
   color: #323232;
   background-color: #f8f7f4;
-}
-
-.btn-basket-active::before {
-  background-position: -1px -20px;
-  background-image: url(../img/basket-red.svg);
 }
 
 .contacts {
@@ -736,7 +755,7 @@ input[type="password"]:not(.label-hide):focus + label{
   flex-direction: row;
   justify-content: space-between;
 }
-
+/*Мороженки*/
 .item {
   position: relative;
   display: inline-block;
@@ -744,53 +763,6 @@ input[type="password"]:not(.label-hide):focus + label{
   margin-bottom: 48px;
   text-align: center;
   vertical-align: top;
-  min-height: 322px;
-}
-
-.item-price-link::before {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -65px;
-  background-color: rgba(248, 247, 244, 0.3);
-  border-radius: 5px;
-  z-index: 10;
-  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.3);
-  padding-bottom: 20px;
-}
-
-.item-hover-content {
-  margin-bottom: -22px;
-}
-
-.bestseller-items .item::after {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 8px;
-  width: 61px;
-  height: 61px;
-  background-image: url(../img/hit.svg);
-  z-index: 50;
-}
-
-.item-hover-img {
-  border-radius: 50%;
-}
-
-.btn-item-hover {
-  position: absolute;
-  bottom: -48px;
-  left: 13%;
-  display: none;
-  width: 170px;
-  padding: 11px 15px 1px 15px;
-  font-size: 18px;
-  line-height: 24px;
-  min-height: 34px;
 }
 
 .item::before {
@@ -803,55 +775,25 @@ input[type="password"]:not(.label-hide):focus + label{
   bottom: -65px;
   background-color: rgba(248, 247, 244, 0.3);
   border-radius: 5px;
-  z-index: 15;
+  z-index: 1;
   box-shadow: 0 20px 20px rgba(50, 50, 50, 0.3);
   padding-bottom: 20px;
-
-}
-
-.item-hover {
-  position: relative;
-  z-index: 11;
 }
 
 .item:hover .btn-item-hover,
 .item:hover::before {
   display: block;
-
 }
 
-.item-price {
+.item-hover {
   position: relative;
-  top: -110px;
-  font-size: 45px;
-  font-weight: 100;
-  line-height: 45px;
-}
-
-.rouble {
-  vertical-align: bottom;
-}
-
-.item-price-link {
-  position: relative;
-  top: -126px;
-  color: #fff;
-  font-size: 16px;
-  border-bottom: 1px solid #a9bbb1;
-  text-decoration: none;
-}
-
-.item-price-link:hover {
-  color: #ffbc9e;
-  border-bottom-color: #a7a294;
-}
-
-.item-price-link:active {
-  color: #bdab96;
-  border-bottom-color: #a7a294;
 }
 
 .btn-item-hover {
+  position: absolute;
+  bottom: -48px;
+  left: 10%;
+  display: none;
   border-radius: 23px;
   margin: 0 auto;
   padding: 10px 25px 11px 21px;
@@ -865,6 +807,7 @@ input[type="password"]:not(.label-hide):focus + label{
   background: linear-gradient(to top, #f26843, #e74a35);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  z-index: 2;
 }
 
 .btn-item-hover:hover {
@@ -875,6 +818,43 @@ input[type="password"]:not(.label-hide):focus + label{
 .btn-item-hover:active {
   background: linear-gradient(to top, #d84732, #e1613e);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.item-hover-img {
+  border-radius: 50%;
+}
+
+.item-price {
+  position: relative;
+  top: -70px;
+  font-size: 45px;
+  font-weight: 100;
+  line-height: 45px;
+  margin: 0;
+}
+
+.rouble {
+  vertical-align: bottom;
+}
+
+.item-price-link {
+  position: relative;
+  top: -30px;
+  color: #fff;
+  font-size: 16px;
+  border-bottom: 1px solid #a9bbb1;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.item-price-link:hover {
+  color: #ffbc9e;
+  border-bottom-color: #a7a294;
+}
+
+.item-price-link:active {
+  color: #bdab96;
+  border-bottom-color: #a7a294;
 }
 
 /* О магазине Глейси*/
@@ -1051,33 +1031,6 @@ input[type="password"]:not(.label-hide):focus + label{
   vertical-align: top;
 }
 
-.field-newsletter {
-  display: flex;
-  flex-grow: 1;
-  margin-right: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 15px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2) inset;
-  border: none;
-  border-radius: 4px;
-  min-height: 24px;
-}
-
-.field-newsletter:hover {
-  border: 2px solid rgba(56, 74, 93, 0.48);
-}
-
-.email-label {
-  position: absolute;
-  left: 15px;
-  top: 7px;
-  color: #999999;
-  font-size: 16px;
-  line-height: 24px;
-  display: block;
-}
-
 .btn-send {
   width: 130px;
   height: 45px;
@@ -1211,24 +1164,36 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 /*Форма обратной связи*/
-.feedback {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 429px;
-  padding: 17px 24px 26px 26px;
-  color: #323232;
+.modal {
+  border-radius: 10px;
   background-color: #f8f7f4;
-  border-radius: 9px;
-  min-height: 390px;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 300;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal-feedback {
+  position: fixed;
+  z-index: 13;
+  top: 120px;
+  left: 50%;
+  margin-left: -239px;
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-bottom: 27px;
+  padding-left: 25px;
 }
 
 .answer {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
   font-size: 24px;
+  color: #323232;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
 }
 
 .feedback-name, .feedback-email {
@@ -1244,7 +1209,7 @@ input[type="password"]:not(.label-hide):focus + label{
 
 .name-user,
 .email-answer,
-.feedback-message {
+.feedback-message{
   position: absolute;
   top: 10px;
   left: 15px;
@@ -1258,10 +1223,47 @@ input[type="password"]:not(.label-hide):focus + label{
 .feedback-text {
   width: 410px;
   height: 141px;
-  margin-bottom: 16px;
+  margin-bottom: 60px;
   overflow: auto;
   border-radius: 3px;
   border: 2px solid rgba(70, 70, 70, 0.48);
+}
+
+.modal-feedback-close {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  background: 0 0;
+  font-size: 0;
+  outline: none;
+}
+
+.modal-feedback-close::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 2px;
+  height: 24px;
+  content: "";
+  background: #000000;
+  transform: rotate(45deg);
+}
+
+.modal-feedback-close::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 2px;
+  height: 24px;
+  content: "";
+  background: #000000;
+  transform: rotate(-45deg);
 }
 
 .btn-submit {
@@ -1296,57 +1298,6 @@ input[type="password"]:not(.label-hide):focus + label{
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.feedback-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin: 0;
-  padding: 0;
-  background-color: inherit;
-  background-image: url(../img/cross-big.svg);
-  border: 0;
-  vertical-align: top;
-}
-
-/*
-.feedback-show {
-  display: block;
-  -webkit-animation: bounce 0.6s;
-  animation: bounce 0.6s;
-}
-
-.feedback-hide {
-  display: none;
-}
-
-
-
-.overlay-feedback-show {
-  display: block;
-}
-/*
-.overlay-feedback-hide{
-  display: none;
-}
-
-.overlay-feedback{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.3;
-  z-index: 250;  
-}
-/*
-.overlay-feedback-show {
-  display: block;
-}
-*/
 .main-footer {
   width: 1200px;
   margin: 0 auto;
@@ -1488,6 +1439,13 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 /*Каталог*/
+
+.active-menu{
+  background: #d07058;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
 .common-buttons-form {
   position: absolute;
   margin: 0;
@@ -1495,10 +1453,10 @@ input[type="password"]:not(.label-hide):focus + label{
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .6);
   border-radius: 5px;
   background-color: #f8f7f4;
+  display: none;
 }
 
 .common-buttons-form-backet {
-  display: none;
   top: 49px;
   right: 0;
   width: 509px;
@@ -1509,6 +1467,11 @@ input[type="password"]:not(.label-hide):focus + label{
   min-height: 203px;
   z-index: 230;
 }
+
+.buttons-common-wrap:hover .common-buttons-form {
+  display: block;
+}
+
 
 .basket-item {
   display: flex;
@@ -1644,7 +1607,7 @@ input[type="password"]:not(.label-hide):focus + label{
 }
 
 .catalog-menu-item {
-  margin-right: 5px;
+  margin-right: 10px;
   color: #e4e9e6;
 }
 
@@ -1676,24 +1639,50 @@ input[type="password"]:not(.label-hide):focus + label{
 
 /*Сортировка*/
 .sorting {
-  margin-left: 5px;
+  margin-left: 14px;
 }
 
 .wrap-select-sort {
   position: relative;
   margin-right: 6px;
   margin-left: -5px;
+  margin-bottom: 13px;
+  cursor: pointer;
 }
 
 .sort {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 6px 7px 8px 15px;
+  padding: 8px 35px 11px 19px;
   border-radius: 20px;
   background: #a9bab0;
   color: #ffffff;
   font-size: 16px;
+}
+
+.wrap-select-sort::after {
+  content:"";
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid white;
+  top: 14px;
+  right: 17px;
+  width: 0;
+  height: 0;
+}
+
+.wrap-select-sort:hover::after {
+  content:"";
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid black;
+  top: 14px;
+  right: 17px;
+  width: 0;
+  height: 0;
 }
 
 select[name=sort]:hover {
@@ -1701,15 +1690,13 @@ select[name=sort]:hover {
   color: #000000;
 }
 
-.select-icon-down {
-  position: absolute;
-  bottom: 15px;
-  left: 147px;
+.filter-title-price {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-.select-icon-down:hover {
-  background-image: url(../img/select-arrow-hover.svg);
-}
+/*Ползунки*/
 
 .ranges {
   position: relative;
@@ -1719,16 +1706,10 @@ select[name=sort]:hover {
   border: 0;
 }
 
-.filter-title-price {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
 .price {
   display: flex;
   flex-direction: row;
-  margin-left: 15px;
+  margin-left: 20px;
   font-size: 14px;
   color: #ffffff;
 }
@@ -1768,10 +1749,13 @@ select[name=sort]:hover {
 .range-controls {
   position: relative;
   height: 20px;
-  width: 195px;
+  width: 218px;
   background-color: #a9bab0;
   border-radius: 50px;
-  padding: 8px 12px;
+  padding-top: 10px;
+  padding-right: 1px;
+  padding-bottom: 9px;
+  margin-left: 8px;
 }
 
 .range-controls .scale {
@@ -1791,7 +1775,7 @@ select[name=sort]:hover {
 }
 
 .range-toggle-min {
-  left: 145px;
+  left: 132px;
 }
 
 .range-toggle-max {
@@ -1800,7 +1784,7 @@ select[name=sort]:hover {
 
 .range-toggle {
   position: absolute;
-  top: 5px;
+  top: 10px;
   width: 4px;
   height: 4px;
   background: #ababab;
@@ -1816,28 +1800,118 @@ select[name=sort]:hover {
   margin-left: 10px;
 }
 
+.filter-title {
+  margin-left: 17px;
+}
+
 .product-fillers {
   border: none;
 }
 
 .container-buttons {
   background: #a9bab0;
-  padding: 8px;
   border-radius: 20px;
+  padding: 10px 8px 9px 9px;
+  margin-left: 2px;
+  cursor: pointer;
 }
 
-.container-buttons-fat {
-  width: 400px;
+.checked-label {
+  position: relative;
+  padding-left: 38px;
+  padding-right: 14px;
+  cursor: pointer;
+}
+
+.checked-label::after {
+  content:" ";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50px;
+  top: -1px;
+  left: 7px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.checked-label::before {
+  content:" ";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50px;
+  top: 3px;
+  left: 11px;
+  display: none;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + .checked-label::before {
+  display: block;
+}
+
+/*Наполнители*/
+input[type="checkbox"] {
+  display: none;
+}
+
+.filter-checkbox-label {
+  position: relative;
+  margin-right: 24px;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.filter-checkbox-label::after{
+  content: "";
+  position: absolute;
+  left: -5px;
+  top:0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.filter-checkbox-label::before {
+  content: " ";
+  position: absolute;
+  left: -9px;
+  top: -2px;
+  width: 27px;
+  height: 22px;
+  background: url(../img/checkbox-on.svg);
+  display: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked +.filter-checkbox-label::before {
+  display: block;
 }
 
 .container-buttons-fillers {
-  width: 650px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 21px;
   margin-left: -15px;
+  cursor: pointer;
 }
 
 .btn-filter {
   width: 140px;
-  margin: 26px 0 0 11px;
+  margin: 26px 0 0 1px;
   padding: 2px 26px 3px 28px;
   background-color: #a9bab0;
   color: #ffffff;
@@ -1845,6 +1919,7 @@ select[name=sort]:hover {
   border-radius: 20px;
   font-size: 16px;
   height: 36px;
+  cursor: pointer;
 }
 
 .btn-filter:hover {
@@ -2127,7 +2202,7 @@ input[type=checkbox], input[type=radio] {
 .basket-item-worth{
   display: inline-block;
   padding-top: 8px;
-  vertical-align: top;   
+  vertical-align: top;
 }
 
 
@@ -2166,5 +2241,5 @@ input[type=checkbox], input[type=radio] {
 .basket-item-title:last-of-type{
   margin-right: 27px;
   margin-top: 18px;
-  font-weight: initial; 
+  font-weight: initial;
 }*/

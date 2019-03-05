@@ -14,7 +14,7 @@
   <nav class="nav-navigation">
     <ul class="main-menu">
       <li class="main-menu_item">
-        <a class="main-nav_link" href="gllacy-catalog.html">Каталог</a>
+        <a class="main-nav_link active-menu" href="gllacy-catalog.html">Каталог</a>
         <ul class="sub-main-menu">
           <li class="main-navigation-li">
             <a href="#" class="main-navigation-title">Новинки</a>
@@ -138,9 +138,6 @@
           <option value="down">сначала дорогие</option>
           <option value="fat">по жирности</option>
         </select>
-        <svg class="select-icon-down" xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5">
-          <path fill="#FFF" d="M4.5 5L0 0h9z"/>
-        </svg>
       </div>
     </fieldset>
     <fieldset class="filter-title-price">
@@ -165,29 +162,20 @@
     <fieldset class="fat-content">
       <legend class="filter-title">Жирность:</legend>
       <div class="container-buttons container-buttons-fat">
-        <input id="fat-0" type="radio" name="fat" value="0" class="fat fat-zero"><label for="fat-0"
-                                                                                        class="checked-label">0%</label>
-        <input id="fat-<10" type="radio" name="fat" value="<10" checked class="fat fat-ten"><label for="fat-<10"
-                                                                                                   class="checked-label">до
-        10%</label>
-        <input id="fat-<30" type="radio" name="fat" value="<30" class="fat fat-thirty"><label for="fat-<30"
-                                                                                              class="checked-label">до
-        30%</label>
-        <input id="fat->30" type="radio" name="fat" value=">30" class="fat more-thirty"><label for="fat->30"
-                                                                                               class="checked-label">выше
-        30%</label>
+        <input id="fat-0" type="radio" name="fat" value="0" class="fat fat-zero"><label for="fat-0" class="checked-label">0%</label>
+        <input id="fat-<10" type="radio" name="fat" value="<10" checked class="fat fat-ten"><label for="fat-<10" class="checked-label">до 10%</label>
+        <input id="fat-<30" type="radio" name="fat" value="<30" class="fat fat-thirty"><label for="fat-<30" class="checked-label">до 30%</label>
+        <input id="fat->30" type="radio" name="fat" value=">30" class="fat more-thirty"><label for="fat->30" class="checked-label">выше 30%</label>
       </div>
     </fieldset>
     <fieldset class="product-fillers">
-      <legend class="filter-title">Наполнители:</legend>
+      <legend class="filter-title-fillers">Наполнители:</legend>
       <div class="container-buttons container-buttons-fillers">
-        <input id="chocolate" type="checkbox" name="sugar" value="chocolate" checked><label
-        for="chocolate">шоколадные</label>
-        <input id="sugar" type="checkbox" name="sugar" value="sugar" checked><label for="sugar">сахарные
-        присыпки</label>
-        <input id="fruit" type="checkbox" name="sugar" value="fruit"><label for="fruit">фрукты</label>
-        <input id="syrop" type="checkbox" name="sugar" value="syrop"><label for="syrop">сиропы</label>
-        <input id="jam" type="checkbox" name="sugar" value="jam"><label for="jam">джемы</label>
+        <input id="chocolate" type="checkbox" name="sugar" value="chocolate" class ="filter-checkbox" checked><label for="chocolate" class="filter-checkbox-label">шоколадные</label>
+        <input id="sugar" type="checkbox" name="sugar" value="sugar" class ="filter-checkbox" checked><label for="sugar" class="filter-checkbox-label">сахарные присыпки</label>
+        <input id="fruit" type="checkbox" name="sugar" value="fruit" class ="filter-checkbox"><label for="fruit" class="filter-checkbox-label">фрукты</label>
+        <input id="syrop" type="checkbox" name="sugar" value="syrop" class ="filter-checkbox"><label for="syrop" class="filter-checkbox-label">сиропы</label>
+        <input id="jam"   type="checkbox" name="sugar" value="jam"   class ="filter-checkbox"><label for="jam" class="filter-checkbox-label">джемы</label>
       </div>
     </fieldset>
     <input class="btn-filter" type="submit" value="Применить">

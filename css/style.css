@@ -1165,7 +1165,7 @@ iframe{
 }
 
 .modal-feedback {
-  /*display: none;*/
+  display: none;
   position: fixed;
   z-index: 13;
   top: 50%;
@@ -1981,5 +1981,9 @@ input[type="checkbox"]:checked +.filter-checkbox-label::before {
 
 .icon-left {
   transform: rotate(180deg);
+}
+
+.feedback-show{
+  display: block;
 }
 

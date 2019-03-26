@@ -249,21 +249,21 @@
         </section>
       </footer>
   </div>
-  <section class=" modal modal-feedback">
+  <section class=" modal modal-feedback bounceDown">
     <p class="answer">Мы обязательно вам ответим!</p>
     <form action="#" method="get">
       <div class="input-field input-field-feedback">
-        <input id="feedback-name" type="text" name="feedback-name" class="feedback-name" placeholder="Как вас зовут?">
+        <input id="feedback-name" type="text" name="feedback-name" class="feedback-name" required placeholder="Как вас зовут?">
         <label for="feedback-name" class="name-user"></label>
       </div>
       <div class="input-field input-field-feedback">
         <input id="feedback-email" type="email" name="feedback-email" class="feedback-email"
-               placeholder="Ваша почта для ответа">
+               required placeholder="Ваша почта для ответа">
         <label for="feedback-email" class="email-answer"></label>
       </div>
       <div class="input-field input-field-feedback">
         <textarea id="feedback-text" name="feedback-text" class="feedback-text"
-                  placeholder="Напишите что-нибудь..."></textarea>
+                  required placeholder="Напишите что-нибудь..."></textarea>
         <label for="feedback-text" class="feedback-message"></label>
       </div>
       <input class="btn btn-submit" type="submit" value="Отправить">

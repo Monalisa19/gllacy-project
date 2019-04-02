@@ -13,8 +13,7 @@ closeModalFeedback.addEventListener("click", function () {
 });
 document.addEventListener("keydown", function (e){
   if(e.keyCode === ESC){
-    modalFeedback.classList.remove("modal-feedback");
-    closeModalFeedback.classList.remove("modal-feedback");
+    modalFeedback.classList.remove("feedback-show");
   }
 })
 

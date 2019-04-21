@@ -158,7 +158,7 @@ body {
 }
 
 .slider-controls label:hover {
-  background-color: #b2c1b7;
+  background-color: rgba(255,255,255,.4);
 }
 
 /*показываем слайд в зависимости от кнопки*/
@@ -333,7 +333,6 @@ body {
   left: 14px;
   top: 5px;
   width: 284px;
-  min-height: 34px;
 }
 
 .buttons-common-wrap {
@@ -369,13 +368,12 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 20px;
-  padding: 9px 14px;
+  padding: 13px 15px;
   color: #999999;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   outline: none;
   font-size: 14px;
-  line-height: 1.71;
 }
 
 .email-field:hover{
@@ -395,13 +393,12 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 20px;
-  padding: 9px 14px;
+  padding: 13px 15px;
   color: #999999;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   outline: none;
   font-size: 14px;
-  line-height: 1.71;
 }
 
 .password-field:hover{
@@ -453,7 +450,7 @@ body {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.form-login-hrefs {
+.form-login-href {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,26 +575,6 @@ body {
   border: 1px solid rgba(46, 136, 228, .52);
   -webkit-box-shadow: 1px 1px 1px rgba(46, 136, 228, .52), -1px -1px 1px rgba(46, 136, 228, .52);
   box-shadow: 1px 1px 1px rgba(46, 136, 228, .52), -1px -1px 1px rgba(46, 136, 228, .52);
-}
-
-.email {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #999999;
-  cursor: text;
-}
-
-.password {
-  position: absolute;
-  top: 94px;
-  left: 32px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #999999;
-  cursor: text;
 }
 
 .btn {
@@ -854,6 +831,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
 /*Мороженки*/
 .item {
   position: relative;
@@ -972,102 +950,85 @@ body {
 /* О магазине Глейси*/
 .about-gllacy {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   background-image: url(../img/pattern-wafel.png);
-  width: 1100px;
-  margin: 0 auto;
-  padding-top: 21px;
-  padding-right: 21px;
-  padding-bottom: 3px;
-  padding-left: 22px;
-  border-radius: 15px;
+  margin: 19px 0px;
+  padding: 10px 0;
+  color: #323232;
+  background-color: #eee0c4;
+  background-position: 15px 50%;
+  border-radius: 17px;
   font-size: 16px;
-  line-height: 22px;
-  color: #323232
-}
-
-.about-gllacy-right,
-.about-gllacy-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 480px;
-}
-
-.about-gllacy-left {
-  padding-left: 57px;
-  margin-top: 0;
-  margin-right: 1px;
-}
-
-.about-gllacy-right {
-  padding-left: 57px;
-  padding-right: 25px;
 }
 
 .subject {
+  margin: 7px 20px;
   font-size: 24px;
+  line-height: 31px;
   font-weight: 500;
-  line-height: 30px;
-  margin-top: 2px;
-  margin-left: 1px;
+}
+
+.about-gllacy-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .about-gllacy-text {
-  margin-top: 0;
-  margin-bottom: 23px;
+  position: relative;
+  flex-basis: auto;
+  box-sizing: border-box;
+  padding: 11px 21px 11px 72px;
+  width: 50%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
 }
 
-.about-gllacy-text:nth-child(1)::after {
+.about-ice::before {
   content: "";
-  position: absolute;
-  left: 20px;
-  top: 92px;
-  width: 50px;
-  height: 50px;
   background-image: url(../img/ice-cream.svg);
-  background-repeat: no-repeat;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 49px;
+  height: 49px;
 }
 
-.about-gllacy-right .about-gllacy-text:nth-child(1)::after {
+.about-cow::before {
   content: "";
-  position: absolute;
-  left: 560px;
-  width: 50px;
-  height: 50px;
   background-image: url(../img/cow.svg);
-  background-repeat: no-repeat;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 49px;
+  height: 49px;
 }
 
-.about-gllacy-text:nth-child(2)::after {
+.about-eco::before {
   content: "";
-  position: absolute;
-  left: 21px;
-  top: 180px;
-  width: 50px;
-  height: 50px;
   background-image: url(../img/eco.svg);
-  background-repeat: no-repeat;
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 49px;
+  height: 49px;
 }
 
-.about-gllacy-right .about-gllacy-text:nth-child(2)::after {
+.about-tetropack::before {
   content: "";
-  position: absolute;
-  left: 560px;
-  width: 50px;
-  height: 50px;
   background-image: url(../img/thermometer.svg);
-  background-repeat: no-repeat;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 49px;
+  height: 49px;
 }
 
 /* О магазине Глейси */
@@ -1305,9 +1266,8 @@ iframe{
   display: none;
   position: fixed;
   z-index: 13;
-  top: 50%;
+  top: 48%;
   left: 50%;
-  /*transform: translate(-50%, -50%);*/
   margin-left: -240px;
   margin-top: -220px;
   padding-top: 15px;
@@ -1322,7 +1282,6 @@ iframe{
   padding: 0;
   font-size: 24px;
   color: #323232;
-  font-size: 24px;
   font-weight: 500;
   line-height: 28px;
 }
@@ -1387,8 +1346,8 @@ iframe{
   position: absolute;
   top: 18px;
   right: 14px;
-  width: 24px;
-  height: 24px;
+  width: 45px;
+  height: 26px;
   cursor: pointer;
   border: none;
   background: 0 0;
@@ -1399,7 +1358,7 @@ iframe{
 .modal-feedback-close::before {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 22px;
   display: block;
   width: 2px;
   height: 24px;
@@ -1413,7 +1372,7 @@ iframe{
 .modal-feedback-close::after {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 22px;
   display: block;
   width: 2px;
   height: 24px;
@@ -1497,7 +1456,6 @@ iframe{
 }
 
 .social-btn {
-  /*display: inline-block;*/
   width: 31px;
   height: 31px;
   margin-right: 7px;
@@ -1558,8 +1516,6 @@ iframe{
   background-image: url(../img/heart.svg);
   width: 15px;
   height: 13px;
-
-
 }
 
 .footer-documents-standards {
@@ -1673,6 +1629,7 @@ iframe{
 .buttons-common-wrap:hover .common-buttons-form {
   display: block;
 }
+
 /*Корзина с товаром*/
 .basket-item {
   display: -webkit-box;
@@ -1695,14 +1652,12 @@ iframe{
 }
 
 .basket-item-delete {
-  position: relative;
-  top: 5px;
-  left: 3px;
+  margin-top: 3px;
   border: 0;
-  background-color: inherit;
+  background-color: transparent;
   padding: 0;
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 23px;
 }
 
 .basket-item-title {
@@ -1794,8 +1749,19 @@ iframe{
 }
 
 .catalog-menu-item {
+  position: relative;
   margin-right: 10px;
   color: #e4e9e6;
+}
+
+.catalog-menu-item:not(:last-child)::before {
+  content: "»";
+  position: absolute;
+  top: 2px;
+  left: 57px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
 .catalog-menu-link {
@@ -1809,7 +1775,7 @@ iframe{
 .catalog-menu-link:hover {
   color: #ffbc9e;
 }
-
+/*
 .catalog-menu-link::after{
   position: absolute;
   top: 97px;
@@ -1827,7 +1793,7 @@ iframe{
   font-size: 14px;
   color: #e4e9e6;
 }
-
+*/
 .ice-cream {
   margin: 0;
   font-weight: normal;
@@ -2018,6 +1984,12 @@ select[name=sort]:hover {
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .fat-content {
@@ -2218,6 +2190,8 @@ input[type="checkbox"]:checked +.filter-checkbox-label::before {
   display: inline-block;
   text-align: center;
   vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .paginator_btn--active {
@@ -2245,7 +2219,6 @@ input[type="checkbox"]:checked +.filter-checkbox-label::before {
   animation-name: bounceDown;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
-
 }
 
 @-webkit-keyframes bounceDown {
